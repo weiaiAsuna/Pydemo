@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+ <form action="/second/user_edit-{{ obj.id }}/" enctype="multipart/form-data" method="post">
+    <div>
+        <h2>用户信息修改</h2>
+    </div>
+        <input type="hidden"  name="id" id="id" value="{{ obj.id }}">
+        <input type="text" name="username" id="username" value="{{ obj.username }}" placeholder="账号">
+        <br/>
+        <input type="text" name="password" id="password" value="{{ obj.password }}" placeholder="密码">
+        <br/>
+        <input type="file" class="form-control" name="images" id="images" placeholder="上传文件">
+        <br/>
+    <div class="modal-footer">
+        <button><a href="/second/list">取消</a></button>
+        <button type="submit">提交更改</button>
+    </div>
+</form>
+
+
+</body>
+</html>
